@@ -1,0 +1,7 @@
+family,best_rule_at_rho1,youden
+ARC,weighted,0.68
+CSQA,weighted,0.6
+GSM8K,single-best,0.247
+MBPP,MAJORITY,0.407
+MMLU,single-best,0.48
+TruthfulQA,single-best,0.547

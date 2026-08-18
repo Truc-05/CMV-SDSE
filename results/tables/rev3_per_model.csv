@@ -1,0 +1,5 @@
+model,standalone_catch,standalone_fa,median_latency_s,times_solo,times_diversifier
+llama31,0.766,0.404,0.32,1,5
+llama32_3b,0.204,0.053,0.39,0,0
+mistral7b,0.846,0.633,0.77,4,2
+qwen7b,0.679,0.247,0.25,1,4

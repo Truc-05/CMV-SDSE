@@ -1,0 +1,8 @@
+family,sm_n_eff50,verification_debt,efficiency
+MAST-3.3,1.21,48.79,0.0242
+ARC,1.11,48.89,0.0222
+MMLU,1.13,48.87,0.0226
+CSQA,1.11,48.89,0.0222
+TruthfulQA,1.09,48.91,0.0218
+GSM8K,1.16,48.84,0.0232
+MBPP,1.06,48.94,0.0212

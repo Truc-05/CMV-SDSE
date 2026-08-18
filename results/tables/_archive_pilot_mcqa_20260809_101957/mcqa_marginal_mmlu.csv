@@ -1,0 +1,6 @@
+failure_mode_id,step,S_before,cand_type,candidate,delta,delta_ci_low,delta_ci_high,unique_catches,denom,delta_fa,rel_cost,V,selected,action
+MMLU,0,,INIT,mistral7b,0.975,0.8712,0.9956,39,40,0.6,1.532,0.8218,True,START
+MMLU,1,mistral7b,NEW,qwen7b,1.0,0.2065,1.0,1,1,0.125,1.0,0.9,True,DIVERSIFY
+MMLU,1,mistral7b,NEW,llama31,0.0,0.0,0.7935,0,1,0.125,1.114,-0.1114,False,
+MMLU,1,mistral7b,SCALE,mistral7b,0.0,0.0,0.7935,0,1,0.125,1.532,-0.1532,False,
+MMLU,1,mistral7b,NEW,llama32_3b,0.0,0.0,0.7935,0,1,0.0,2.246,-0.2246,False,

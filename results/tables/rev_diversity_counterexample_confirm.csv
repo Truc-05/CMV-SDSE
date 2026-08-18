@@ -1,0 +1,2 @@
+family,verifier,k,catch,solo,solo_catch,rho_with_solo,solo_missed,marginal_catch,marg_ci_low,marg_ci_high
+CSQA,gemma2_9b,50,0.640,qwen7b,0.893,0.566,16,0.000,0.000,0.194

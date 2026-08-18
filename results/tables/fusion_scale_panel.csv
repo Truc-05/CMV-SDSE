@@ -1,0 +1,7 @@
+family,start,solo_catch,plus_same_model,diverse_add,plus_diverse,d_scale,d_diverse
+ARC,qwen7b,0.9,0.9,mistral7b,0.973,0.0,0.073
+MMLU,qwen7b,0.827,0.833,mistral7b,0.967,0.006,0.14
+CSQA,qwen7b,0.893,0.9,mistral7b,0.953,0.007,0.06
+TruthfulQA,llama31,0.76,0.767,mistral7b,0.887,0.007,0.127
+GSM8K,llama31,0.953,0.953,mistral7b,0.973,0.0,0.02
+MBPP,mistral7b,0.867,0.867,llama31,0.92,0.0,0.053

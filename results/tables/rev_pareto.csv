@@ -1,0 +1,6 @@
+policy,wall_seconds,calls,U,pareto
+Same-model (k=50),30.4,50.0,0.233,False
+Random,1.32,3.0,0.224,False
+Accuracy-ranked,1.34,3.0,0.183,False
+Low-correlation,1.36,3.0,0.192,False
+CMV-SDSE,0.26,1.0,0.486,True

@@ -1,0 +1,9 @@
+k_max: 50
+k_pilot: 5
+n_repeats_per_item: 30
+n_items_per_failure_mode: 40
+accept_threshold: 0.5
+min_gates_for_ceiling_fit: 10
+seed_base: 20260701
+timeout_seconds_per_gate: 60
+retry_on_backend_error: 3

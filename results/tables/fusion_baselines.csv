@@ -1,0 +1,49 @@
+family,method,n_verifiers,catch,fa,youden,bal_acc
+ARC,OR (cascade / paper rule),4,0.98,0.773,0.207,0.603
+ARC,AND (unanimous),4,0.233,0.027,0.207,0.603
+ARC,MAJORITY (>half),4,0.653,0.147,0.507,0.753
+ARC,Dawid-Skene EM (unsup),4,0.653,0.147,0.507,0.753
+ARC,single-best verifier (CV),1,0.9,0.227,0.673,0.837
+ARC,Youden-weighted vote (CV),4,0.867,0.187,0.68,0.84
+ARC,pattern-Bayes stack (CV),4,0.9,0.24,0.66,0.83
+ARC,"greedy cascade (paper, qwen7b+mistral7b)",2,0.973,0.733,0.24,0.62
+MMLU,OR (cascade / paper rule),4,0.973,0.8,0.173,0.587
+MMLU,AND (unanimous),4,0.187,0.04,0.147,0.573
+MMLU,MAJORITY (>half),4,0.593,0.213,0.38,0.69
+MMLU,Dawid-Skene EM (unsup),4,0.667,0.333,0.333,0.667
+MMLU,single-best verifier (CV),1,0.827,0.347,0.48,0.74
+MMLU,Youden-weighted vote (CV),4,0.827,0.413,0.413,0.707
+MMLU,pattern-Bayes stack (CV),4,0.893,0.467,0.427,0.713
+MMLU,"greedy cascade (paper, qwen7b+mistral7b+llama31)",3,0.973,0.8,0.173,0.587
+CSQA,OR (cascade / paper rule),4,0.967,0.667,0.3,0.65
+CSQA,AND (unanimous),4,0.38,0.027,0.353,0.677
+CSQA,MAJORITY (>half),4,0.64,0.107,0.533,0.767
+CSQA,Dawid-Skene EM (unsup),4,0.64,0.107,0.533,0.767
+CSQA,single-best verifier (CV),1,0.893,0.307,0.587,0.793
+CSQA,Youden-weighted vote (CV),4,0.84,0.24,0.6,0.8
+CSQA,pattern-Bayes stack (CV),4,0.9,0.36,0.54,0.77
+CSQA,"greedy cascade (paper, qwen7b+mistral7b+llama31)",3,0.967,0.653,0.313,0.657
+TruthfulQA,OR (cascade / paper rule),4,0.9,0.693,0.207,0.603
+TruthfulQA,AND (unanimous),4,0.22,0.04,0.18,0.59
+TruthfulQA,MAJORITY (>half),4,0.553,0.133,0.42,0.71
+TruthfulQA,Dawid-Skene EM (unsup),4,0.553,0.147,0.407,0.703
+TruthfulQA,single-best verifier (CV),1,0.76,0.213,0.547,0.773
+TruthfulQA,Youden-weighted vote (CV),4,0.687,0.187,0.5,0.75
+TruthfulQA,pattern-Bayes stack (CV),4,0.76,0.28,0.48,0.74
+TruthfulQA,"greedy cascade (paper, llama31+mistral7b+qwen7b)",3,0.9,0.693,0.207,0.603
+GSM8K,OR (cascade / paper rule),4,0.973,0.96,0.013,0.507
+GSM8K,AND (unanimous),4,0.04,0.0,0.04,0.52
+GSM8K,MAJORITY (>half),4,0.293,0.093,0.2,0.6
+GSM8K,Dawid-Skene EM (unsup),4,0.293,0.093,0.2,0.6
+GSM8K,single-best verifier (CV),1,0.353,0.107,0.247,0.623
+GSM8K,Youden-weighted vote (CV),4,0.353,0.107,0.247,0.623
+GSM8K,pattern-Bayes stack (CV),4,0.973,0.987,-0.013,0.493
+GSM8K,"greedy cascade (paper, llama31+mistral7b)",2,0.973,0.96,0.013,0.507
+MBPP,OR (cascade / paper rule),4,0.933,0.747,0.187,0.593
+MBPP,AND (unanimous),4,0.027,0.0,0.027,0.513
+MBPP,MAJORITY (>half),4,0.513,0.107,0.407,0.703
+MBPP,Dawid-Skene EM (unsup),4,0.78,0.413,0.367,0.683
+MBPP,single-best verifier (CV),1,0.707,0.387,0.32,0.66
+MBPP,Youden-weighted vote (CV),4,0.8,0.44,0.36,0.68
+MBPP,pattern-Bayes stack (CV),4,0.84,0.48,0.36,0.68
+MBPP,"greedy cascade (paper, mistral7b+llama31+qwen7b)",3,0.933,0.747,0.187,0.593

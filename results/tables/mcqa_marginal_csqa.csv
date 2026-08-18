@@ -1,0 +1,14 @@
+failure_mode_id,step,S_before,cand_type,candidate,delta,delta_ci_low,delta_ci_high,unique_catches,denom,delta_fa,rel_cost,V,selected,action
+CSQA,0,,INIT,qwen7b,0.8933,0.8338,0.9333,134,150,0.3067,1.0,0.7933,True,START
+CSQA,1,qwen7b,NEW,mistral7b,0.5625,0.3318,0.769,9,16,0.4423,3.204,0.2421,True,DIVERSIFY
+CSQA,1,qwen7b,NEW,llama31,0.3125,0.1416,0.556,5,16,0.1346,1.325,0.18,False,
+CSQA,1,qwen7b,SCALE,qwen7b,0.0625,0.0111,0.2833,1,16,0.0192,1.0,-0.0375,False,
+CSQA,1,qwen7b,NEW,llama32_3b,0.0,0.0,0.1936,0,16,0.0577,2.268,-0.2268,False,
+CSQA,2,qwen7b+mistral7b,NEW,llama31,0.2857,0.0822,0.6411,2,7,0.1034,1.325,0.1532,True,DIVERSIFY
+CSQA,2,qwen7b+mistral7b,SCALE,qwen7b,0.1429,0.0257,0.5131,1,7,0.0,1.0,0.0429,False,
+CSQA,2,qwen7b+mistral7b,NEW,llama32_3b,0.0,0.0,0.3543,0,7,0.0345,2.268,-0.2268,False,
+CSQA,2,qwen7b+mistral7b,SCALE,mistral7b,0.0,0.0,0.3543,0,7,0.0345,3.204,-0.3204,False,
+CSQA,3,qwen7b+mistral7b+llama31,SCALE,qwen7b,0.0,0.0,0.4345,0,5,0.0,1.0,-0.1,True,STOP
+CSQA,3,qwen7b+mistral7b+llama31,SCALE,llama31,0.0,0.0,0.4345,0,5,0.0,1.325,-0.1325,False,
+CSQA,3,qwen7b+mistral7b+llama31,NEW,llama32_3b,0.0,0.0,0.4345,0,5,0.0385,2.268,-0.2268,False,
+CSQA,3,qwen7b+mistral7b+llama31,SCALE,mistral7b,0.0,0.0,0.4345,0,5,0.0385,3.204,-0.3204,False,

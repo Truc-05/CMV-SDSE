@@ -1,0 +1,16 @@
+rho,method,target_gates,mean_regret,median,max,frac_le_0p05
+0.25,zero-shot transfer (A->B),0,0.13,0.137,0.393,0.37
+0.25,1-round re-probe on B,1,0.0,0.0,0.0,1.0
+0.25,2-round re-probe on B,2,0.0,0.0,0.0,1.0
+0.25,5-round re-probe on B,5,0.0,0.0,0.0,1.0
+0.25,full recalibration,50,0.0,0.0,0.0,1.0
+0.5,zero-shot transfer (A->B),0,0.077,0.0,0.26,0.53
+0.5,1-round re-probe on B,1,0.014,0.0,0.087,0.83
+0.5,2-round re-probe on B,2,0.014,0.0,0.087,0.83
+0.5,5-round re-probe on B,5,0.014,0.0,0.087,0.83
+0.5,full recalibration,50,0.0,0.0,0.0,1.0
+1.0,zero-shot transfer (A->B),0,0.078,0.0,0.32,0.7
+1.0,1-round re-probe on B,1,0.0,0.0,0.0,1.0
+1.0,2-round re-probe on B,2,0.0,0.0,0.0,1.0
+1.0,5-round re-probe on B,5,0.0,0.0,0.0,1.0
+1.0,full recalibration,50,0.0,0.0,0.0,1.0

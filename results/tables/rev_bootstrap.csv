@@ -1,0 +1,4 @@
+comparison,mean_dU,ci_low,ci_high,cohen_d
+CMV-SDSE − accuracy,0.302,0.239,0.374,3.15
+CMV-SDSE − lowcorr,0.293,0.236,0.37,3.15
+CMV-SDSE − samemodel,0.252,0.129,0.344,1.73

@@ -1,0 +1,14 @@
+failure_mode_id,step,S_before,cand_type,candidate,delta,delta_ci_low,delta_ci_high,unique_catches,denom,delta_fa,rel_cost,V,selected,action
+MMLU,0,,INIT,qwen7b,0.8267,0.7581,0.8789,124,150,0.3467,1.169,0.7097,True,START
+MMLU,1,qwen7b,NEW,mistral7b,0.8077,0.6212,0.9149,21,26,0.6939,3.744,0.4333,True,DIVERSIFY
+MMLU,1,qwen7b,NEW,llama31,0.4615,0.2876,0.6454,12,26,0.2449,1.537,0.3078,False,
+MMLU,1,qwen7b,SCALE,qwen7b,0.0385,0.0068,0.1889,1,26,0.0204,1.169,-0.0785,False,
+MMLU,1,qwen7b,NEW,llama32_3b,0.0,0.0,0.1287,0,26,0.1224,1.0,-0.1,False,
+MMLU,2,qwen7b+mistral7b,NEW,llama31,0.2,0.0362,0.6245,1,5,0.0,1.537,0.0463,True,DIVERSIFY
+MMLU,2,qwen7b+mistral7b,NEW,llama32_3b,0.0,0.0,0.4345,0,5,0.0,1.0,-0.1,False,
+MMLU,2,qwen7b+mistral7b,SCALE,qwen7b,0.0,0.0,0.4345,0,5,0.0,1.169,-0.1169,False,
+MMLU,2,qwen7b+mistral7b,SCALE,mistral7b,0.0,0.0,0.4345,0,5,0.0,3.744,-0.3744,False,
+MMLU,3,qwen7b+mistral7b+llama31,NEW,llama32_3b,0.0,0.0,0.4899,0,4,0.0,1.0,-0.1,True,STOP
+MMLU,3,qwen7b+mistral7b+llama31,SCALE,qwen7b,0.0,0.0,0.4899,0,4,0.0,1.169,-0.1169,False,
+MMLU,3,qwen7b+mistral7b+llama31,SCALE,llama31,0.0,0.0,0.4899,0,4,0.0,1.537,-0.1537,False,
+MMLU,3,qwen7b+mistral7b+llama31,SCALE,mistral7b,0.0,0.0,0.4899,0,4,0.0,3.744,-0.3744,False,

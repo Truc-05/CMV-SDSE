@@ -1,0 +1,10 @@
+{
+  "fc3_label": "FC3",
+  "fc3_description": "task_verification_failure",
+  "fc3_rate": 0.235,
+  "n_traces_total": null,
+  "n_fc3_traces": null,
+  "related_failure_modes": ["FM-3.1", "FM-3.2", "FM-3.3"],
+  "source": "MAST-Data",
+  "provenance": "Category share summed from the per-mode percentages in arXiv:2503.13657v3 section 4. Those percentages are shares of total mode flags, not per-trace prevalence."
+}

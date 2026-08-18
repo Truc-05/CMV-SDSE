@@ -1,0 +1,4 @@
+mode,pool,n_shared,mu_miss_truncate,rho_v_truncate,n_eff50_truncate,blind_truncate,mu_miss_evidence,rho_v_evidence,n_eff50_evidence,blind_evidence
+3.1,same_model,40,0.911,0.541,1.82,0.631,0.933,0.563,1.75,0.72
+3.2,same_model,40,0.988,0.518,1.89,0.95,0.988,0.518,1.89,0.95
+3.3,same_model,39,0.819,0.82,1.21,0.0,0.811,0.728,1.36,0.528

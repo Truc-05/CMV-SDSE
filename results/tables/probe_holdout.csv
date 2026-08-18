@@ -1,0 +1,3 @@
+pool,probe_R,n_items,rho_v_hat,mu_hat,pred_rel_at_K_correlated,pred_rel_at_K_independent,observed_rel_at_K,correlated_pred_in_band,heldout_mae_correlated,heldout_mae_independent
+same_model,2,40,0.7245,0.8375,0.3469,0.9999,0.3,True,0.0267,0.6398
+same_model,3,40,0.7391,0.85,0.312,0.9997,0.3,True,0.0102,0.6393

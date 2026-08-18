@@ -1,0 +1,7 @@
+pairing_condition,failure_mode_id,n_items,gates_total,gates_indeterminate,indeterminate_rate
+cross_family_3,FM-3.3,60,3000,0,0.0
+diverse_matched,FM-3.3,60,3000,0,0.0
+qwen_flip,FM-3.3,60,3000,0,0.0
+same_family,FM-3.3,60,3000,0,0.0
+same_model,FM-3.3,60,3000,0,0.0
+same_model_mistral,FM-3.3,60,3000,0,0.0

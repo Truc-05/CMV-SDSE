@@ -1,0 +1,4 @@
+policy,calls,wall_seconds,catch,U
+same-model (k=50),50.0,30.4,0.89,0.23
+cross-family (all 3),3.0,1.48,0.93,0.2
+CMV-SDSE,1.0,0.26,0.71,0.49

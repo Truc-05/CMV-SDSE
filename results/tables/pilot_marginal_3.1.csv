@@ -1,0 +1,5 @@
+failure_mode_id,step,S_before,cand_type,candidate,delta,delta_ci_low,delta_ci_high,unique_catches,denom,delta_fa,rel_cost,V,selected,action
+FM-3.1,0,,INIT,mistral7b,0.325,0.2008,0.4798,13,40,0.6,1.383,0.1867,True,START
+FM-3.1,1,mistral7b,NEW,qwen7b,0.037,0.0066,0.1828,1,27,0.0,1.0,-0.063,True,STOP
+FM-3.1,1,mistral7b,SCALE,mistral7b,0.037,0.0066,0.1828,1,27,0.0,1.383,-0.1013,False,
+FM-3.1,1,mistral7b,NEW,llama31,0.0,0.0,0.1246,0,27,0.0,1.164,-0.1164,False,

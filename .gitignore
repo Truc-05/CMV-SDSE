@@ -1,0 +1,15 @@
+# virtualenv / caches
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+*.egg-info/
+
+# runtime logs (incl. the ~1GB ollama server logs) and pid files
+*.log
+*.pid
+
+# scratch
+_probe*.txt
+resu

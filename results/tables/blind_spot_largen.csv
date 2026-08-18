@@ -1,0 +1,16 @@
+family,pool,n,raw_frac_at_ceiling,n_at_ceiling,pi0_hat,pi0_ci_lo,pi0_ci_hi,lr_ceiling,p_ceiling,ci_excludes_0,atom_supported,existence_claim_ok
+MAST-3.3,same_model,40,0.7,28,0.0,0.0,0.76,0.0,1.0,False,False,False
+MAST-3.3,cross_family_3,40,0.0,0,0.0,0.0,0.045,0.0,1.0,False,False,False
+MAST-3.3,same_family,40,0.025,1,0.021,0.0,0.1,1.34,0.1234,False,False,False
+ARC,same_model,150,0.08,12,0.073,0.0,0.125,1.43,0.1162,False,False,False
+ARC,cross_family_3,150,0.007,1,0.005,0.0,0.025,0.82,0.182,False,False,False
+ARC,same_family,150,0.08,12,0.046,0.0,0.1,2.52,0.0562,False,False,False
+MMLU,same_model,150,0.113,17,0.091,0.0,0.155,1.09,0.1479,False,False,False
+MMLU,cross_family_3,150,0.013,2,0.013,0.005,0.035,5.96,0.0073,True,True,True
+MMLU,same_family,150,0.08,12,0.061,0.02,0.11,6.59,0.0051,True,True,True
+CSQA,same_model,150,0.08,12,0.073,0.0,0.125,1.56,0.1055,False,False,False
+CSQA,cross_family_3,150,0.007,1,0.005,0.0,0.025,0.86,0.1774,False,False,False
+CSQA,same_family,150,0.033,5,0.006,0.0,0.045,0.08,0.3867,False,False,False
+TruthfulQA,same_model,150,0.36,54,0.258,0.0,0.4,0.35,0.2761,False,False,False
+TruthfulQA,cross_family_3,150,0.02,3,0.0,0.0,0.03,0.0,0.5,False,False,False
+TruthfulQA,same_family,150,0.033,5,0.01,0.0,0.05,0.33,0.2837,False,False,False

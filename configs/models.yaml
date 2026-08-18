@@ -1,0 +1,140 @@
+# =============================================================================
+# Backend settings — grouped per provider so each is edited in isolation.
+#   shared keys apply to every provider; the per-provider blocks override/extend.
+# =============================================================================
+backend:
+  # --- shared ---
+  timeout_s: 120
+  max_retries: 3
+  retry_backoff_s: 2.0
+  # --- local models (Ollama) ---
+  ollama:
+    host: "http://localhost:11437"
+
+# =============================================================================
+# VERIFIERS
+#   Each entry may set `provider:` (default "ollama"). Local checkpoints must
+#   match `ollama list`; API checkpoints are the provider's model id.
+# =============================================================================
+verifiers:
+
+  # ------------------------------------------------------------------ #
+  #  LOCAL VERIFIERS  (provider: ollama, the default)                   #
+  #  checkpoint must match `ollama list` on the serving host.           #
+  # ------------------------------------------------------------------ #
+  qwen7b:
+    provider: ollama
+    family: qwen2.5
+    checkpoint: "qwen2.5:7b"
+    temperature: 0.7
+    max_tokens: 200
+    num_ctx: 32768
+    keep_alive: "30m"
+    structured: true
+  llama31:
+    provider: ollama
+    family: llama3
+    checkpoint: "llama3.1:8b"
+    temperature: 0.7
+    max_tokens: 200
+    num_ctx: 32768
+    keep_alive: "30m"
+    structured: true
+  llama32_3b:
+    provider: ollama
+    family: llama3
+    checkpoint: "llama3.2:3b"
+    temperature: 0.7
+    max_tokens: 200
+    num_ctx: 32768
+    keep_alive: "30m"
+    structured: true
+  gemma2_9b:
+    provider: ollama
+    family: gemma2
+    checkpoint: "gemma2:9b"
+    temperature: 0.7
+    max_tokens: 200
+    num_ctx: 8192
+    keep_alive: "30m"
+    structured: true
+  mistral7b:
+    provider: ollama
+    family: mistral
+    checkpoint: "mistral:7b"
+    temperature: 0.7
+    max_tokens: 200
+    num_ctx: 32768
+    keep_alive: "30m"
+    structured: true
+  # --- NOT-PULLED: for the cluster run, to make same_family a pure qwen size-ladder ---
+  qwen3b:
+    provider: ollama
+    family: qwen2.5
+    checkpoint: "qwen2.5:3b"
+    temperature: 0.7
+    max_tokens: 200
+    num_ctx: 32768
+    keep_alive: "30m"
+    structured: true
+  qwen14b:
+    provider: ollama
+    family: qwen2.5
+    checkpoint: "qwen2.5:14b"
+    temperature: 0.7
+    max_tokens: 200
+    num_ctx: 32768
+    keep_alive: "30m"
+    structured: true
+  # 24B-scale OPEN verifier (public param count) — lifts the pool past the 14B ceiling.
+  # 4-bit ~14-15GB; on 2x16GB Ollama splits it across GPUs.  ollama pull mistral-small3.1:24b
+  mistral_small_24b:
+    provider: ollama
+    family: mistral
+    checkpoint: "mistral-small3.1:24b"
+    temperature: 0.7
+    max_tokens: 200
+    num_ctx: 16384          # 16k keeps KV-cache light for the 24B
+    keep_alive: "30m"
+    structured: true
+
+# =============================================================================
+# POOLS — a pool is an ordered list of verifier ids; the chain cycles them per gate.
+# =============================================================================
+# H2 dependence ladder: rho_v(same_model) >= rho_v(same_family) >= rho_v(cross_family).
+verifier_pools:
+  same_model: [qwen7b]
+  same_family: [llama32_3b, llama31]
+  cross_family: [qwen7b, llama31, gemma2_9b, mistral7b]
+  # 3 distinct families, all ~7-8B, ~14GB total -> fits one 16GB GPU without model thrash.
+  cross_family_3: [qwen7b, llama31, mistral7b]
+  # magnitude demo: strong correlated pair (qwen7b+qwen14b) + strong diverse (mistral).
+  qwen_flip: [qwen7b, qwen14b, mistral7b]
+  # --- Phase A validity controls (pilot n=40) ---
+  same_model_mistral: [mistral7b]     # solo catch ~0.65 (best)
+  same_model_llama8b: [llama31]       # solo catch ~0.52 (2nd best)
+  same_model_gemma: [gemma2_9b]       # 9B, untested — probes a stronger same-model point
+  diverse_matched: [mistral7b, llama31]
+
+  # ------------------------------------------------------------------ #
+  #  ESCALATION POOLS  (cheap local pool -> stronger 24B verifier)      #
+  # ------------------------------------------------------------------ #
+  # 24B open escalation target (local GPU). same_model_* solo, low --k: collect one verdict
+  # per item, combine offline with the local runs; escalate_* is the end-to-end cascade.
+  same_model_mistral24b: [mistral_small_24b]
+  escalate_mistral24b: [qwen7b, llama31, mistral7b, mistral_small_24b]
+  # SAME-MODEL REDUNDANCY of the 24B at k=50 (measures n_eff@50 for the open 24B itself).
+  # Distinct pool name -> pairing_condition="redun_mistral24b" -> EXACT-match filter in
+  # freeze_redundancy_invariant.same_model_neff (=="same_model") NEVER picks it up, and it
+  # writes to fresh *redun_mistral24b* files (does not touch the k=3 escalate verdicts).
+  redun_mistral24b: [mistral_small_24b]
+
+cluster_pools:
+  same_model: [qwen7b]
+  same_family: [qwen3b, qwen7b, qwen14b]
+  cross_family: [qwen7b, llama31, gemma2_9b, mistral7b]
+
+pool_semantics:
+  same_model: "one checkpoint, gates differ only by sampling seed; isolates sampling-level dependence"
+  same_family: "one training lineage across sizes; adds scale variation, keeps lineage shared"
+  cross_family: "distinct training lineages; the closest available approximation to independent verifiers"

@@ -1,0 +1,12 @@
+failure_mode_id,step,S_before,cand_type,candidate,delta,delta_ci_low,delta_ci_high,unique_catches,denom,delta_fa,rel_cost,V,selected,action
+FM-3.3,0,,INIT,mistral7b,0.5385,0.3857,0.6843,21,39,0.5,1.0,0.4385,True,START
+FM-3.3,1,mistral7b,NEW,llama31,0.3889,0.2031,0.6138,7,18,0.4,1.332,0.2557,True,DIVERSIFY
+FM-3.3,1,mistral7b,SCALE,mistral7b,0.0556,0.0099,0.2576,1,18,0.0,1.0,-0.0444,False,
+FM-3.3,1,mistral7b,NEW,llama32_3b,0.0,0.0,0.1759,0,18,0.0,1.013,-0.1013,False,
+FM-3.3,1,mistral7b,NEW,qwen7b,0.0,0.0,0.1759,0,18,0.1,1.2,-0.12,False,
+FM-3.3,1,mistral7b,NEW,qwen14b,0.0,0.0,0.1759,0,18,0.0,3.115,-0.3115,False,
+FM-3.3,2,mistral7b+llama31,SCALE,mistral7b,0.0909,0.0162,0.3774,1,11,0.0,1.0,-0.0091,True,STOP
+FM-3.3,2,mistral7b+llama31,SCALE,llama31,0.0909,0.0162,0.3774,1,11,0.0,1.332,-0.0423,False,
+FM-3.3,2,mistral7b+llama31,NEW,llama32_3b,0.0,0.0,0.2588,0,11,0.0,1.013,-0.1013,False,
+FM-3.3,2,mistral7b+llama31,NEW,qwen7b,0.0,0.0,0.2588,0,11,0.1667,1.2,-0.12,False,
+FM-3.3,2,mistral7b+llama31,NEW,qwen14b,0.0,0.0,0.2588,0,11,0.0,3.115,-0.3115,False,

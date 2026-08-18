@@ -1,0 +1,5 @@
+step,accuracy_greedy_pick,reliability_accuracy,marginal_greedy_pick,reliability_marginal,optimal_reliability
+1,mistral7b,0.6514,mistral7b,0.6514,0.6514
+2,llama31,0.8442,llama31,0.8442,0.8442
+3,qwen7b,0.8457,llama32_3b,0.8577,0.8577
+4,llama32_3b,0.8592,qwen7b,0.8592,0.8592

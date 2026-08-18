@@ -1,0 +1,8 @@
+family,n,sm_rho_v,sm_n_eff50,sm_miss,solo_verifier,solo_catch,diversified_in,div_unique,div_denom,div_ci_low,dead_never_added,invariant_ok
+MAST-3.3,40,0.821,1.21,0.823,,,,,,,,
+ARC,150,0.901,1.11,0.118,qwen7b,0.9,mistral7b,11.0,15.0,0.4805,llama32_3b,True
+MMLU,150,0.881,1.13,0.178,qwen7b,0.8267,mistral7b,21.0,26.0,0.6212,llama32_3b,True
+CSQA,150,0.9,1.11,0.118,qwen7b,0.8933,mistral7b,9.0,16.0,0.3318,llama32_3b,True
+TruthfulQA,150,0.915,1.09,0.448,llama31,0.76,mistral7b,19.0,36.0,0.3701,llama32_3b,True
+GSM8K,150,0.856,1.16,0.625,llama31,0.9533,mistral7b,3.0,7.0,0.1582,"llama32_3b,qwen7b",True
+MBPP,150,0.938,1.06,0.46,mistral7b,0.8667,llama31,8.0,20.0,0.2188,llama32_3b,True

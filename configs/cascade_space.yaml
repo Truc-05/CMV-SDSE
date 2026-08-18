@@ -1,0 +1,18 @@
+pairing_conditions:
+  - same_model
+  - same_family
+  - cross_family
+
+targets:
+  - any
+  - fc3
+  - "3.3"
+
+k_grid: [1, 2, 3, 5, 8, 13, 21, 34, 50]
+
+replicate_axes:
+  - pairing_condition
+  - target
+  - k
+
+output_schema_version: 2

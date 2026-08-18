@@ -1,0 +1,7 @@
+family,solo,diversifier,ARC,MMLU,CSQA,TruthfulQA,GSM8K,MBPP
+ARC,mistral7b,qwen7b,0.667,0.545,0.0,0.206,0.143,0.25
+MMLU,mistral7b,qwen7b,0.667,0.545,0.0,0.206,0.143,0.25
+CSQA,qwen7b,mistral7b,0.0,0.0,0.562,0.0,0.429,0.0
+TruthfulQA,mistral7b,llama31,0.167,0.273,0.312,0.5,0.0,0.4
+GSM8K,llama31,mistral7b,0.0,0.0,0.562,0.0,0.429,0.0
+MBPP,mistral7b,llama31,0.167,0.273,0.312,0.5,0.0,0.4

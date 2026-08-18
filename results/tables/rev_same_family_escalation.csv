@@ -1,0 +1,15 @@
+family,pair,n,small_catch,same_family,cross_family,cross_who,scale_lift,cross_lift
+ARC,llama 3B->8B,150,0.26,0.687,0.927,mistral7b,0.427,0.667
+ARC,mistral 7B->24B,150,0.92,0.96,0.973,qwen7b,0.04,0.053
+MMLU,llama 3B->8B,150,0.187,0.7,0.927,mistral7b,0.513,0.74
+MMLU,mistral 7B->24B,150,0.927,0.973,0.967,qwen7b,0.047,0.04
+CSQA,llama 3B->8B,150,0.393,0.727,0.893,qwen7b,0.333,0.5
+CSQA,mistral 7B->24B,150,0.853,0.933,0.953,qwen7b,0.08,0.1
+TruthfulQA,llama 3B->8B,150,0.293,0.76,0.86,mistral_small_24b,0.467,0.567
+TruthfulQA,mistral 7B->24B,150,0.773,0.94,0.893,llama31,0.167,0.12
+GSM8K,llama 3B->8B,150,0.04,0.953,0.733,mistral7b,0.913,0.693
+GSM8K,mistral 7B->24B,150,0.733,0.86,0.967,llama31,0.127,0.233
+MBPP,llama 3B->8B,150,0.053,0.807,0.873,mistral7b,0.753,0.82
+MBPP,mistral 7B->24B,150,0.867,0.933,0.92,llama31,0.067,0.053
+MAST-3.3,llama 3B->8B,39,0.0,0.513,0.667,mistral7b,0.513,0.667
+MAST-3.3,qwen 7B->14B,39,0.103,0.128,0.667,mistral7b,0.026,0.564

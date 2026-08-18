@@ -1,0 +1,5 @@
+action,catch,fa,U
+STOP  (qwen7b solo),0.103,0.2,0.053
+"SCALE (qwen7b x50, same-model)",0.103,0.2,0.053
+ESCALATE (+qwen14b),0.128,0.25,0.066
+ESCALATE (+mistral7b),0.641,0.6,0.491

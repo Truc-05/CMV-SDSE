@@ -1,0 +1,8 @@
+family,solo,target,R_stop,R_scale,R_escalate,stop_meets,scale_meets,escalate_meets,U_stop,U_escalate,dU,escalated_to,n_added
+ARC,qwen7b,0.9,0.9,0.9,0.9,1,1,1,0.843,0.843,0.0,(none),0.0
+MMLU,qwen7b,0.9,0.827,0.827,0.967,0,0,1,0.74,0.767,0.027,mistral7b,1.0
+CSQA,qwen7b,0.9,0.893,0.893,0.953,0,0,1,0.817,0.8,-0.017,mistral7b,1.0
+TruthfulQA,qwen7b,0.9,0.56,0.56,0.9,0,0,1,0.477,0.727,0.25,mistral7b+llama31,2.0
+GSM8K,qwen7b,0.9,0.353,0.353,0.96,0,0,1,0.327,0.727,0.4,llama31,1.0
+MBPP,qwen7b,0.9,0.54,0.54,0.9,0,0,1,0.5,0.717,0.217,mistral7b,1.0
+MACRO,,0.9,0.679,0.679,0.93,1,1,6,0.617,0.764,0.146,,1.0

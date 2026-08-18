@@ -1,0 +1,7 @@
+pairing_condition,failure_mode_id,n_clean_items,false_alarm_rate
+cross_family_3,FM-3.3,20,0.95
+diverse_matched,FM-3.3,20,1.0
+qwen_flip,FM-3.3,20,0.8
+same_family,FM-3.3,20,1.0
+same_model,FM-3.3,20,0.3
+same_model_mistral,FM-3.3,20,0.75

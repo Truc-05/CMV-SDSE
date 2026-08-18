@@ -1,0 +1,10 @@
+failure_mode_id,step,S_before,cand_type,candidate,delta,delta_ci_low,delta_ci_high,unique_catches,denom,delta_fa,rel_cost,V,selected,action
+GSM8K,0,,INIT,llama31,0.9533,0.9068,0.9772,143,150,0.9333,3.68,0.5853,True,START
+GSM8K,1,llama31,NEW,mistral7b,0.4286,0.1582,0.7495,3,7,0.4,3.007,0.1279,True,DIVERSIFY
+GSM8K,1,llama31,NEW,qwen7b,0.1429,0.0257,0.5131,1,7,0.0,1.018,0.0411,False,
+GSM8K,1,llama31,NEW,llama32_3b,0.0,0.0,0.3543,0,7,0.0,1.0,-0.1,False,
+GSM8K,1,llama31,SCALE,llama31,0.0,0.0,0.3543,0,7,0.0,3.68,-0.368,False,
+GSM8K,2,llama31+mistral7b,NEW,llama32_3b,0.0,0.0,0.4899,0,4,0.0,1.0,-0.1,True,STOP
+GSM8K,2,llama31+mistral7b,NEW,qwen7b,0.0,0.0,0.4899,0,4,0.0,1.018,-0.1018,False,
+GSM8K,2,llama31+mistral7b,SCALE,mistral7b,0.0,0.0,0.4899,0,4,0.0,3.007,-0.3007,False,
+GSM8K,2,llama31+mistral7b,SCALE,llama31,0.0,0.0,0.4899,0,4,0.0,3.68,-0.368,False,

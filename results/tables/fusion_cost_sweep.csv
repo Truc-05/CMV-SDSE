@@ -1,0 +1,7 @@
+cost_ratio_fa_over_miss,best_fixed_rule,best_fixed_U,controller_U,controller_setsize,controller_tracks_best
+0.0,OR (cascade / paper rule),0.954,0.953,2.67,True
+0.25,pattern-Bayes stack (CV),0.761,0.761,2.33,True
+0.5,pattern-Bayes stack (CV),0.644,0.588,2.17,False
+1.0,single-best verifier (CV),0.475,0.46,1.5,True
+2.0,MAJORITY (>half),0.275,0.259,1.0,True
+4.0,AND (unanimous),0.093,-0.034,1.0,False

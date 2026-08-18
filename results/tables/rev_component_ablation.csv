@@ -1,0 +1,6 @@
+variant,catch,fa,ncalls,U
+full CMV,0.712,0.227,1.0,0.486
+no false-alarm term,0.867,0.456,1.0,0.411
+no compute term,0.758,0.271,1.0,0.487
+"catch-only (no FA, no cost)",0.954,0.771,2.833,0.183
+no significance gate,0.712,0.227,1.0,0.486

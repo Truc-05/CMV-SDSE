@@ -1,0 +1,13 @@
+rho,method,insample_U,heldout_U,n_sources,test_catch,test_fa,overacq_rate,n_acquisitions,stability
+0.25,CMV without gate,0.754,0.748,1.0,0.86,0.448,,0,0.971
+0.25,CMV + Wilson gate,0.754,0.748,1.0,0.86,0.448,,0,0.971
+0.25,Greedy ensemble (GES),0.786,0.758,1.801,0.904,0.586,0.306,961,0.462
+0.5,CMV without gate,0.629,0.615,1.0,0.776,0.322,,0,0.878
+0.5,CMV + Wilson gate,0.629,0.615,1.0,0.776,0.322,,0,0.878
+0.5,Greedy ensemble (GES),0.666,0.639,1.339,0.862,0.447,0.808,407,0.648
+1.0,CMV without gate,0.495,0.475,1.0,0.727,0.252,,0,0.902
+1.0,CMV + Wilson gate,0.495,0.475,1.0,0.727,0.252,,0,0.902
+1.0,Greedy ensemble (GES),0.5,0.464,1.148,0.742,0.278,0.455,178,0.773
+2.0,CMV without gate,0.28,0.222,1.0,0.666,0.222,,0,0.837
+2.0,CMV + Wilson gate,0.28,0.222,1.0,0.666,0.222,,0,0.837
+2.0,Greedy ensemble (GES),0.287,0.209,1.132,0.642,0.216,0.264,159,0.693
