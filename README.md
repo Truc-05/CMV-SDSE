@@ -47,9 +47,7 @@ python scripts/reviewer_analyses.py          # acquisition ablation, budget curv
 python scripts/fusion_selection_baselines.py # CMV-SDSE vs GES / mRMR (in-sample + held-out)
 python scripts/joint_topology_controller.py  # joint source–topology controller (held-out)
 
-# 3) figures
-python scripts/make_figures3.py              # main paper figures -> figure3/
-python scripts/new_fig_real.py               # recovery / generalization / joint-policy -> figure4/
+
 ```
 
 ## Notes
