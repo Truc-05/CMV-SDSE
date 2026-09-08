@@ -1,5 +1,8 @@
-# Budget-Aware Fusion of Correlated LLM Verifiers
-### *When more verifiers are not more information — when to Scale, Diversify, Stop, or Escalate*
+# More Verifiers, Same Evidence
+### Conditional Marginal Value for Adaptive Multi-Agent Verifier Fusion
+
+> When more verifiers are not more information:
+> when to Scale, Diversify, Stop, or Escalate.
 
 Stacking LLM verifiers assumes more calls give more evidence. They don't when the calls are
 **correlated**. This repo measures that gap and turns it into an acquisition policy.
@@ -12,7 +15,10 @@ Stacking LLM verifiers assumes more calls give more evidence. They don't when th
   alarms and compute).
 - **CMV-SDSE.** A budget-aware controller that **S**cales / **D**iversifies / **S**tops / **E**scalates
   on that value, and in its joint form co-selects the **fusion topology** (OR↔AND↔…) with the source set.
-- One value-selected verifier reaches **U=0.486** vs 0.233 for 50 same-model calls (~**117×** less compute).
+- **Efficiency.** At the balanced operating point (`rho=1`), CMV-SDSE selects one verifier
+  and achieves **U=0.486**, compared with **U=0.233** for repeated same-model verification.
+  In our measured serving setup, this corresponds to approximately **117× lower wall-clock
+  compute per decision**; this factor is hardware- and backend-dependent.
 
 Paper (Information Fusion submission): [`nd.md`](nd.md).
 
@@ -49,6 +55,23 @@ python scripts/joint_topology_controller.py  # joint source–topology controlle
 
 
 ```
+## Reproduce the paper results
+
+The main paper results can be reproduced directly from the released frozen verdicts;
+no GPU or model inference is required.
+
+```bash
+# Acquisition-policy ablation and budget curves
+python scripts/reviewer_analyses.py
+
+# CMV-SDSE vs. GES / mRMR, including held-out evaluation
+python scripts/fusion_selection_baselines.py
+
+# Joint source–topology selection
+python scripts/joint_topology_controller.py
+
+```
+
 
 ## Notes
 - **Reproducibility:** the controller, metric, and hyperparameters were frozen before the confirmatory
@@ -56,3 +79,6 @@ python scripts/joint_topology_controller.py  # joint source–topology controlle
   verdicts. `theory.marginal_value._prep` excludes out-of-pool probes (24B, gemma) so frozen tables stand.
 - **Scope (no overclaim):** results are stated for the *seven evaluated families* and ≤14B core pool
   (+24B escalation); `π₀` is reported as an upper bound only; no universal fusion rule is claimed.
+
+## License
+This project is licensed under the MIT License. See the [`LICENSE`](LICENSE) file for details.
